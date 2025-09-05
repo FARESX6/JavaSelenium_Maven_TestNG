@@ -28,4 +28,9 @@ public class BrowserActions {
         driver.navigate().refresh();
     }
 
+    public static void closeBrowser(WebDriver driver) {
+        driver.quit();
+        LogsUtil.info("Browser Closed");
+    }
+
 }
