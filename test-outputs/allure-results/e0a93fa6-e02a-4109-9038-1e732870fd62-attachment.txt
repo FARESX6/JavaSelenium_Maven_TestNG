@@ -1,0 +1,26 @@
+[INFO] - [06-09-2025 23:04:51] [main] [com.swaglabs.Listeners.TestNGListeners] - Test Execution started
+[INFO] - [06-09-2025 23:04:51] [main] [com.swaglabs.utils.FilesUtils] - Directory already exists: C:\Users\Lenovo\Desktop\SwagLabs_Testing\test-outputs\allure-results
+[INFO] - [06-09-2025 23:04:51] [main] [com.swaglabs.utils.FilesUtils] - Directory already exists: C:\Users\Lenovo\Desktop\SwagLabs_Testing\test-outputs\Logs
+[INFO] - [06-09-2025 23:04:51] [main] [com.swaglabs.utils.FilesUtils] - Directory created: C:\Users\Lenovo\Desktop\SwagLabs_Testing\test-outputs\screenshots
+[INFO] - [06-09-2025 23:04:51] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  Command line suite
+
+[INFO] - [06-09-2025 23:04:51] [main] [com.swaglabs.utils.AllureUtils] - Logs attached to Allure report
+[INFO] - [06-09-2025 23:04:51] [main] [com.swaglabs.utils.PropertiesUtils] - Properties loaded successfully from C:\Users\Lenovo\Desktop\SwagLabs_Testing/src/main/resources/
+[INFO] - [06-09-2025 23:04:53] [main] [com.swaglabs.drivers.DriverManager] - Driver created is: Chrome
+[INFO] - [06-09-2025 23:04:55] [main] [com.swaglabs.utils.AllureUtils] - Logs attached to Allure report
+[DEBUG] - [06-09-2025 23:04:55] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['login-credentials']['username']
+[INFO] - [06-09-2025 23:04:55] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'standard_user'
+[INFO] - [06-09-2025 23:04:56] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.id: user-name
+[INFO] - [06-09-2025 23:04:56] [main] [com.swaglabs.utils.ElementActions] - Data Entered is: standard_user
+[DEBUG] - [06-09-2025 23:04:56] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['login-credentials']['password']
+[INFO] - [06-09-2025 23:04:56] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'secret_sauce'
+[DEBUG] - [06-09-2025 23:04:56] [main] [com.swaglabs.pages.LoginPage] - Entering password
+[INFO] - [06-09-2025 23:04:56] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.id: password
+[INFO] - [06-09-2025 23:04:56] [main] [com.swaglabs.utils.ElementActions] - Data Entered is: secret_sauce
+[DEBUG] - [06-09-2025 23:04:56] [main] [com.swaglabs.pages.LoginPage] - Clicking on login button
+[INFO] - [06-09-2025 23:04:56] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.id: login-button
+[INFO] - [06-09-2025 23:04:56] [main] [com.swaglabs.utils.ElementActions] - Element Clicked is: By.id: login-button
+[INFO] - [06-09-2025 23:04:56] [main] [com.swaglabs.utils.AllureUtils] - Logs attached to Allure report
+[INFO] - [06-09-2025 23:04:56] [main] [com.swaglabs.Listeners.TestNGListeners] - Test case testValidLogin passed
+[INFO] - [06-09-2025 23:04:56] [main] [com.swaglabs.utils.BrowserActions] - Browser Closed

@@ -1,9 +1,0 @@
-com\swaglabs\utils\BrowserActions.class
-com\swaglabs\utils\CustomSoftAssertion.class
-com\swaglabs\drivers\DriverManager.class
-com\swaglabs\utils\Waits.class
-com\swaglabs\utils\ElementActions.class
-com\swaglabs\drivers\BrowserFactory.class
-com\swaglabs\utils\Scrolling.class
-com\swaglabs\utils\Validations.class
-com\swaglabs\pages\LoginPage.class

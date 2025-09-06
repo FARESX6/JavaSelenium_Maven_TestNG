@@ -11,7 +11,10 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import com.swaglabs.utils.PropertiesUtils;
+
 public class BrowserFactory {
+    
     public static WebDriver getBrowser(String browser) {
         switch (browser.toLowerCase()) {
             case "chrome":
@@ -26,7 +29,8 @@ public class BrowserFactory {
                         "autofill.profile_enabled", false);
                 options.setExperimentalOption("prefs", prefs);
                 options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-                //options.addArguments("--headless");
+                if (!PropertiesUtils.getPropertyValue("executionType").equalsIgnoreCase("local")) {
+                options.addArguments("--headless");}
                 return new ChromeDriver(options);
             case "firefox":
                 FirefoxOptions ffOptions = new FirefoxOptions();
@@ -35,10 +39,11 @@ public class BrowserFactory {
                 ffOptions.addArguments("--disable-extensions");
                 ffOptions.addArguments("--disable-notifications");
                 ffOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-                //ffOptions.addArguments("--headless");
                 ffOptions.addArguments("--remote-allow-origins=*");
                 ffOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
                 ffOptions.setAcceptInsecureCerts(true);
+                if (!PropertiesUtils.getPropertyValue("executionType").equalsIgnoreCase("local")) {
+                ffOptions.addArguments("--headless");}
                 return new FirefoxDriver(ffOptions);
             default:
                 EdgeOptions  edgeOptions = new EdgeOptions();
@@ -52,7 +57,8 @@ public class BrowserFactory {
                         "autofill.profile_enabled", false);
                 edgeOptions.setExperimentalOption("prefs", edgePrefs);
                 edgeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-                //edgeOptions.addArguments("--headless");
+                if (!PropertiesUtils.getPropertyValue("executionType").equalsIgnoreCase("local")) {
+                edgeOptions.addArguments("--headless");}
                 return new EdgeDriver(edgeOptions);
         }
     }

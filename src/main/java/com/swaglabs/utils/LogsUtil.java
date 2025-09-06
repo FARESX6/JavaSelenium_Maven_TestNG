@@ -8,6 +8,7 @@ public class LogsUtil {
     private LogsUtil() {
         // Private constructor to prevent instantiation
     }
+    public static final String LOGS_DIR = System.getProperty("user.dir") + "/test-outputs/Logs/";
 
     public static Logger logger(){
         return LogManager.getLogger(Thread.currentThread().getStackTrace()[3].getClassName());
@@ -23,6 +24,9 @@ public class LogsUtil {
 
     public static void info(String... message){
         logger().info(String.join(" ", message));
+    }
+    public static void warn(String... message){
+        logger().warn(String.join(" ", message));
     }
 
     public static void error(String... message){

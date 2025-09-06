@@ -6,8 +6,13 @@ import org.openqa.selenium.WebDriver;
 import com.swaglabs.utils.BrowserActions;
 import com.swaglabs.utils.CustomSoftAssertion;
 import com.swaglabs.utils.ElementActions;
+import com.swaglabs.utils.LogsUtil;
+import com.swaglabs.utils.PropertiesUtils;
 import com.swaglabs.utils.Validations;
 import com.swaglabs.utils.Waits;
+
+import io.qameta.allure.Step;
+
 
 public class LoginPage {
 
@@ -27,27 +32,32 @@ public class LoginPage {
     }
 
     // Navigate to the login page
+    @Step("Navigate to the loginPage")
     public void navigateToLoginPage() {
-        BrowserActions.NavigateToURL(driver, "https://www.saucedemo.com/");
+        BrowserActions.NavigateToURL(driver, PropertiesUtils.getPropertyValue("baseURL"));
         Waits.waitForElementToBeVisible(driver,username);
     }
 
     // actions to be done > wait - scroll - click - find - sendkeys
+    @Step("entering username")
     public LoginPage enterUsername(String username) {
         ElementActions.sendData(driver, this.username, username);
         return this;
     }
-
+    @Step("entering password")
     public LoginPage enterPassword(String password) {
+        LogsUtil.debug("Entering password");
         ElementActions.sendData(driver, this.password, password);
         return this;
     }
-
+    
+    @Step("clicking login button")
     public LoginPage clickLoginButton() {
+        LogsUtil.debug("Clicking on login button");
         ElementActions.clickElement(driver, loginButton);
         return this;
     }
-
+    @Step("getting error message")
     public String getErrorMessage() {
 
         return ElementActions.getText(driver, errorMessage);
@@ -56,12 +66,12 @@ public class LoginPage {
 
     // validations
     public LoginPage asserLoginPageURL() {
-        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getCurrentURL(driver),"https://www.saucedemo.com/inventory.html", "URL is not matching");
+        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getCurrentURL(driver),PropertiesUtils.getPropertyValue("homeURL"), "URL is not matching");
         return this;
     }
 
     public LoginPage assertLoginPageTitle() {
-        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getPageTitle(driver), "Swag Labs","Title is not matching");
+        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getPageTitle(driver), PropertiesUtils.getPropertyValue("appTitle"),"Title is not matching");
         return this;
     }
 
@@ -72,13 +82,13 @@ public class LoginPage {
     }
 
     public LoginPage assertSuccessfulLogin() {
-        Validations.validatePageUrl(driver, "https://www.saucedemo.com/inventory.html");
+        Validations.validatePageUrl(driver,PropertiesUtils.getPropertyValue("homeURL"));
         return this;
 
     }
 
-    public LoginPage assertUnsuccessfulLogin(String expectedErrorMessage) {
-        Validations.validateEquals(getErrorMessage(), expectedErrorMessage, "Error message does not match");
+    public LoginPage assertUnsuccessfulLogin() {
+        Validations.validateEquals(getErrorMessage(), PropertiesUtils.getPropertyValue("errorMSG"), "Error message does not match");
         return this;
     }
 
