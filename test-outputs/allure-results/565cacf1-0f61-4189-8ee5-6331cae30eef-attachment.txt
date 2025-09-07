@@ -1,7 +1,0 @@
-[INFO] - [06-09-2025 23:04:51] [main] [com.swaglabs.Listeners.TestNGListeners] - Test Execution started
-[INFO] - [06-09-2025 23:04:51] [main] [com.swaglabs.utils.FilesUtils] - Directory already exists: C:\Users\Lenovo\Desktop\SwagLabs_Testing\test-outputs\allure-results
-[INFO] - [06-09-2025 23:04:51] [main] [com.swaglabs.utils.FilesUtils] - Directory already exists: C:\Users\Lenovo\Desktop\SwagLabs_Testing\test-outputs\Logs
-[INFO] - [06-09-2025 23:04:51] [main] [com.swaglabs.utils.FilesUtils] - Directory created: C:\Users\Lenovo\Desktop\SwagLabs_Testing\test-outputs\screenshots
-[INFO] - [06-09-2025 23:04:51] [main] [org.testng.internal.Utils] - [TestNG] Running:
-  Command line suite
-

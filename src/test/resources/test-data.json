@@ -1,7 +1,11 @@
 {
   "login-credentials": {
     "username": "standard_user",
-    "password": "secret_sauce"
+    "password": "secret_sauce",
+    "InvalidUsername":"Standart",
+    "InvalidPassword":"secret___",
+    "BlancUsername":"",
+    "BlancPassword":""
   },
   "product-names": {
     "item1": {

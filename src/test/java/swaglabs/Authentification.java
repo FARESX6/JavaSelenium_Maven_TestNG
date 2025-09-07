@@ -15,23 +15,48 @@ import com.swaglabs.pages.LoginPage;
 import com.swaglabs.utils.BrowserActions;
 import com.swaglabs.utils.FilesUtils;
 import com.swaglabs.utils.JsonUtils;
-import com.swaglabs.utils.SreenshotsUtils;
+
+
+import io.qameta.allure.Description;
 
 
 @Listeners(TestNGListeners.class)
-public class LoginTest {
+public class Authentification {
 
     JsonUtils testData;
 
     // Tests
     @Test
+    @Description("Login with invalide Username")
+    public void testInvalidLoginUsername() {
+        new LoginPage(DriverManager.getDriver()).enterUsername(testData.getJsonData("login-credentials.InvalidUsername"))
+                .enterPassword(testData.getJsonData("login-credentials.password"))
+                .clickLoginButton()
+                .assertUnsuccessfulLoginUsername();
+        
+
+    }
+    @Test
+    @Description("Login with invalid Password")
+    public void testInvalidLoginPassword() {
+        new LoginPage(DriverManager.getDriver()).enterUsername(testData.getJsonData("login-credentials.username"))
+                .enterPassword(testData.getJsonData("login-credentials.InvalidPassword"))
+                .clickLoginButton()
+                .assertUnsuccessfulLoginPassword();
+        
+    }
+        
+
+
+    @Test
+    @Description("Valid Login")
     public void testValidLogin() {
         
         new LoginPage(DriverManager.getDriver()).enterUsername(testData.getJsonData("login-credentials.username"))
                 .enterPassword(testData.getJsonData("login-credentials.password"))
                 .clickLoginButton()
                 .assertSuccessfulLogin();
-        SreenshotsUtils.takeScreenshot("SuccesfullLogin");
+        
     }
 
 
@@ -49,8 +74,6 @@ public class LoginTest {
         new LoginPage(DriverManager.getDriver()).navigateToLoginPage();
 
     }
-
- 
     @AfterMethod
     public void tearDown() {
        
@@ -61,4 +84,3 @@ public class LoginTest {
     }
 
 }
-

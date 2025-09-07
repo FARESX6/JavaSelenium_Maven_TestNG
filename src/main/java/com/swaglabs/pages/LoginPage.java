@@ -14,6 +14,7 @@ import com.swaglabs.utils.Waits;
 import io.qameta.allure.Step;
 
 
+
 public class LoginPage {
 
     // driver object
@@ -30,7 +31,6 @@ public class LoginPage {
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
-
     // Navigate to the login page
     @Step("Navigate to the loginPage")
     public void navigateToLoginPage() {
@@ -88,6 +88,15 @@ public class LoginPage {
     }
 
     public LoginPage assertUnsuccessfulLogin() {
+        Validations.validateEquals(getErrorMessage(), PropertiesUtils.getPropertyValue("errorMSG"), "Error message does not match");
+        return this;
+        
+    }
+     public LoginPage assertUnsuccessfulLoginUsername() {
+        Validations.validateEquals(getErrorMessage(), PropertiesUtils.getPropertyValue("errorMSG"), "Error message does not match");
+        return this;
+    }
+    public LoginPage assertUnsuccessfulLoginPassword() {
         Validations.validateEquals(getErrorMessage(), PropertiesUtils.getPropertyValue("errorMSG"), "Error message does not match");
         return this;
     }
