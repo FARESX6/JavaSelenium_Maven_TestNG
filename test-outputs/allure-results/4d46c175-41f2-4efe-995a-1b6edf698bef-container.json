@@ -1,1 +1,0 @@
-{"uuid":"4d46c175-41f2-4efe-995a-1b6edf698bef","name":"swaglabs.Authentification.setUp","children":["ab07426c-8aab-4ea8-ac57-f9f8eee715e3"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1757280527793,"stop":1757280529673}],"afters":[],"start":1757280527793,"stop":1757280529674}

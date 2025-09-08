@@ -1,0 +1,25 @@
+[INFO] - [08-09-2025 15:06:50] [main] [com.swaglabs.Listeners.TestNGListeners] - Test Execution started
+[ERROR] - [08-09-2025 15:06:50] [main] [com.swaglabs.utils.FilesUtils] - Failed to delete file: D:\Project\SwagLabs_Testing\test-outputs\Logs\log_2025-09-08_15-06-49.log
+[INFO] - [08-09-2025 15:06:50] [main] [com.swaglabs.utils.FilesUtils] - Directory already exists: D:\Project\SwagLabs_Testing\test-outputs\allure-results
+[INFO] - [08-09-2025 15:06:50] [main] [com.swaglabs.utils.FilesUtils] - Directory already exists: D:\Project\SwagLabs_Testing\test-outputs\Logs
+[INFO] - [08-09-2025 15:06:50] [main] [com.swaglabs.utils.FilesUtils] - Directory created: D:\Project\SwagLabs_Testing\test-outputs\screenshots
+[INFO] - [08-09-2025 15:06:50] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  Command line suite
+
+[INFO] - [08-09-2025 15:06:50] [main] [com.swaglabs.utils.PropertiesUtils] - Properties loaded successfully from D:\Project\SwagLabs_Testing/src/main/resources/
+[INFO] - [08-09-2025 15:06:51] [main] [com.swaglabs.drivers.DriverManager] - Driver created is: Chrome
+[DEBUG] - [08-09-2025 15:06:52] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['login-credentials']['username']
+[INFO] - [08-09-2025 15:06:52] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'standard_user'
+[INFO] - [08-09-2025 15:06:53] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.id: user-name
+[INFO] - [08-09-2025 15:06:53] [main] [com.swaglabs.utils.ElementActions] - Data Entered is: standard_user
+[DEBUG] - [08-09-2025 15:06:53] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['login-credentials']['InvalidPassword']
+[INFO] - [08-09-2025 15:06:53] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'login-credentials.InvalidPassword' in the json file: 'test-data' has value: 'secret___'
+[DEBUG] - [08-09-2025 15:06:53] [main] [com.swaglabs.pages.LoginPage] - Entering password
+[INFO] - [08-09-2025 15:06:53] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.id: password
+[INFO] - [08-09-2025 15:06:53] [main] [com.swaglabs.utils.ElementActions] - Data Entered is: secret___
+[DEBUG] - [08-09-2025 15:06:53] [main] [com.swaglabs.pages.LoginPage] - Clicking on login button
+[INFO] - [08-09-2025 15:06:53] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.id: login-button
+[INFO] - [08-09-2025 15:06:53] [main] [com.swaglabs.utils.ElementActions] - Element Clicked is: By.id: login-button
+[INFO] - [08-09-2025 15:06:53] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.cssSelector: h3[data-test='error']
+[INFO] - [08-09-2025 15:06:53] [main] [com.swaglabs.utils.ElementActions] - Getting Element Text From: By.cssSelector: h3[data-test='error']  Text is: Epic sadface: Username and password do not match any user in this service
+[INFO] - [08-09-2025 15:06:53] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.cssSelector: h3[data-test='error']
