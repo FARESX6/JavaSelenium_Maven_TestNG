@@ -1,0 +1,44 @@
+[INFO] - [07-09-2025 23:28:47] [main] [com.swaglabs.Listeners.TestNGListeners] - Test Execution started
+[ERROR] - [07-09-2025 23:28:47] [main] [com.swaglabs.utils.FilesUtils] - Failed to delete file: C:\Users\Lenovo\Desktop\SwagLabs_Testing\test-outputs\Logs\log_2025-09-07_23-28-47.log
+[INFO] - [07-09-2025 23:28:47] [main] [com.swaglabs.utils.FilesUtils] - Directory already exists: C:\Users\Lenovo\Desktop\SwagLabs_Testing\test-outputs\allure-results
+[INFO] - [07-09-2025 23:28:47] [main] [com.swaglabs.utils.FilesUtils] - Directory already exists: C:\Users\Lenovo\Desktop\SwagLabs_Testing\test-outputs\Logs
+[INFO] - [07-09-2025 23:28:47] [main] [com.swaglabs.utils.FilesUtils] - Directory created: C:\Users\Lenovo\Desktop\SwagLabs_Testing\test-outputs\screenshots
+[INFO] - [07-09-2025 23:28:47] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  Command line suite
+
+[INFO] - [07-09-2025 23:28:47] [main] [com.swaglabs.utils.PropertiesUtils] - Properties loaded successfully from C:\Users\Lenovo\Desktop\SwagLabs_Testing/src/main/resources/
+[INFO] - [07-09-2025 23:28:48] [main] [com.swaglabs.drivers.DriverManager] - Driver created is: Chrome
+[DEBUG] - [07-09-2025 23:28:49] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['login-credentials']['username']
+[INFO] - [07-09-2025 23:28:49] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'standard_user'
+[INFO] - [07-09-2025 23:28:49] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.id: user-name
+[INFO] - [07-09-2025 23:28:49] [main] [com.swaglabs.utils.ElementActions] - Data Entered is: standard_user
+[DEBUG] - [07-09-2025 23:28:49] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['login-credentials']['InvalidPassword']
+[INFO] - [07-09-2025 23:28:49] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'login-credentials.InvalidPassword' in the json file: 'test-data' has value: 'secret___'
+[DEBUG] - [07-09-2025 23:28:49] [main] [com.swaglabs.pages.LoginPage] - Entering password
+[INFO] - [07-09-2025 23:28:50] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.id: password
+[INFO] - [07-09-2025 23:28:50] [main] [com.swaglabs.utils.ElementActions] - Data Entered is: secret___
+[DEBUG] - [07-09-2025 23:28:50] [main] [com.swaglabs.pages.LoginPage] - Clicking on login button
+[INFO] - [07-09-2025 23:28:50] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.id: login-button
+[INFO] - [07-09-2025 23:28:50] [main] [com.swaglabs.utils.ElementActions] - Element Clicked is: By.id: login-button
+[INFO] - [07-09-2025 23:28:50] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.cssSelector: h3[data-test='error']
+[INFO] - [07-09-2025 23:28:50] [main] [com.swaglabs.utils.ElementActions] - Getting Element Text From: By.cssSelector: h3[data-test='error']  Text is: Epic sadface: Username and password do not match any user in this service
+[INFO] - [07-09-2025 23:28:50] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.cssSelector: h3[data-test='error']
+[INFO] - [07-09-2025 23:28:50] [main] [com.swaglabs.utils.AllureUtils] - Logs attached to Allure report
+[INFO] - [07-09-2025 23:28:50] [main] [com.swaglabs.Listeners.TestNGListeners] - Test case testInvalidLoginPassword passed
+[INFO] - [07-09-2025 23:28:50] [main] [com.swaglabs.utils.BrowserActions] - Browser Closed
+[INFO] - [07-09-2025 23:28:51] [main] [com.swaglabs.drivers.DriverManager] - Driver created is: Chrome
+[DEBUG] - [07-09-2025 23:28:52] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['login-credentials']['InvalidUsername']
+[INFO] - [07-09-2025 23:28:52] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'login-credentials.InvalidUsername' in the json file: 'test-data' has value: 'Standart'
+[INFO] - [07-09-2025 23:28:52] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.id: user-name
+[INFO] - [07-09-2025 23:28:52] [main] [com.swaglabs.utils.ElementActions] - Data Entered is: Standart
+[DEBUG] - [07-09-2025 23:28:52] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['login-credentials']['password']
+[INFO] - [07-09-2025 23:28:52] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'secret_sauce'
+[DEBUG] - [07-09-2025 23:28:52] [main] [com.swaglabs.pages.LoginPage] - Entering password
+[INFO] - [07-09-2025 23:28:52] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.id: password
+[INFO] - [07-09-2025 23:28:52] [main] [com.swaglabs.utils.ElementActions] - Data Entered is: secret_sauce
+[DEBUG] - [07-09-2025 23:28:52] [main] [com.swaglabs.pages.LoginPage] - Clicking on login button
+[INFO] - [07-09-2025 23:28:52] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.id: login-button
+[INFO] - [07-09-2025 23:28:52] [main] [com.swaglabs.utils.ElementActions] - Element Clicked is: By.id: login-button
+[INFO] - [07-09-2025 23:28:52] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.cssSelector: h3[data-test='error']
+[INFO] - [07-09-2025 23:28:52] [main] [com.swaglabs.utils.ElementActions] - Getting Element Text From: By.cssSelector: h3[data-test='error']  Text is: Epic sadface: Username and password do not match any user in this service
+[INFO] - [07-09-2025 23:28:52] [main] [com.swaglabs.utils.ElementActions] - Element Found is: By.cssSelector: h3[data-test='error']
