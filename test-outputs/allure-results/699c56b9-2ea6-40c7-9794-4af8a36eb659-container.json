@@ -1,0 +1,1 @@
+{"uuid":"699c56b9-2ea6-40c7-9794-4af8a36eb659","name":"SwagLabs Test Suite","children":["f71895b6-0488-4382-a598-aa4a3f693f06"],"befores":[{"name":"beforeSuite","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1757356987310,"stop":1757356987338}],"afters":[],"start":1757356987256,"stop":1757356995835}
